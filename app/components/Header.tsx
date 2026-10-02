@@ -21,18 +21,20 @@ export function Header({ title }: HeaderProps) {
   }, []);
 
   return (
-    <header className="border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900">
+    <header className="border-b border-gray-800 bg-gray-700 dark:border-gray-950 dark:bg-gray-800">
       <div className="mx-auto max-w-2xl px-4 py-5">
-        <h1 className="text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">
+        <h1 className="text-2xl font-semibold tracking-tight text-gray-50">
           {title}
         </h1>
-        <p className="mt-1 min-h-5 text-sm text-gray-500 dark:text-gray-400">
+        <p className="mt-1 min-h-5 text-sm text-gray-300 dark:text-gray-400">
           {today && (
             <time dateTime={today.toLocaleDateString("en-CA")}>
               {dateFormatter.format(today)}
             </time>
           )}
         </p>
+        
+      
       </div>
     </header>
   );
